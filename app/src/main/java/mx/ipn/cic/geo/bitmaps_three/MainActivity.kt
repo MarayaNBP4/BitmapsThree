@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
       // Cargar la i-esima imagen de forma aleatoria.
 
       //Funcion para generar un numero aleatorio
-      val aleatorio = (0..10).random()
+      val aleatorio = (1..10).random()
       val resourceId = resources.getIdentifier(
         "imagen_${aleatorio.toString()}", "drawable", packageName)
       if (cancelPotentialWork(resourceId, imageViewBitmap_1)) {
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
     imageViewBitmap_2 = findViewById(R.id.imageViewBitmap_2)
     buttonDrawBitmap_2.setOnClickListener {
       //Funcion para generar un numero aleatorio
-      val aleatorio = (0..10).random()
+      val aleatorio = (1..10).random()
       val resourceId = resources.getIdentifier(
         "imagen_${aleatorio.toString()}", "drawable", packageName)
       if (cancelPotentialWork(resourceId, imageViewBitmap_2)) {
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
     imageViewBitmap_3 = findViewById(R.id.imageViewBitmap_3)
     buttonDrawBitmap_3.setOnClickListener {
       //Funcion para generar un numero aleatorio
-      val aleatorio = (0..10).random()
+      val aleatorio = (1..10).random()
       val resourceId = resources.getIdentifier(
         "imagen_${aleatorio.toString()}", "drawable", packageName)
       if (cancelPotentialWork(resourceId, imageViewBitmap_3)) {
@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
     imageViewBitmap_4 = findViewById(R.id.imageViewBitmap_4)
     buttonDrawBitmap_4.setOnClickListener {
       //Funcion para generar un numero aleatorio
-      val aleatorio = (0..10).random()
+      val aleatorio = (1..10).random()
       val resourceId = resources.getIdentifier(
         "imagen_${aleatorio.toString()}", "drawable", packageName)
       if (cancelPotentialWork(resourceId, imageViewBitmap_4)) {
@@ -120,6 +120,10 @@ class MainActivity : AppCompatActivity() {
       }
       R.id.itemMenuClearBitmap -> {
         // Establecer color de fondo.
+        imageViewBitmap_1.setImageDrawable(null)
+        imageViewBitmap_2.setImageDrawable(null)
+        imageViewBitmap_3.setImageDrawable(null)
+        imageViewBitmap_4.setImageDrawable(null)
         true
       }
       R.id.itemMenuExitApp -> {
